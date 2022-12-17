@@ -1,0 +1,47 @@
+@model PROJETOMVC.Models.Contato
+
+@{
+    ViewData["Title"]= "Detalhes do contato";
+}
+
+<h1>Detalhes do contato</h1>
+
+<table class= "table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Telefone)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Ativo)
+                </td> 
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Editar" asp-route-id="@Model.Id">Editar</a>
+    <a asp-action="Index">Voltar</a>
+</div>
